@@ -18,7 +18,11 @@
                     </label>
                     <input type="text" id="name" name="name" placeholder="Tu Nombre"
                         class="border p-3 w-full rouded-lg">
-                </div>
+                @error('name')
+                    <span class="text-xs text-red-500">{{$message}}</span>
+                    
+                @enderror
+                    </div>
                 <div class="mb-5">
                     <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">
                         Username
